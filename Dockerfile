@@ -1,10 +1,10 @@
-FROM n8nio/n8n:latest
+FROM n8nio/n8n:1.44.0
 
-# Use non-root user to avoid permission issues
+# Use the default user provided by the image
 USER node
 
-# Expose the port n8n runs on
+# Expose the port n8n listens on
 EXPOSE 5678
 
-# Set default command
+# Start n8n
 CMD ["n8n"]
