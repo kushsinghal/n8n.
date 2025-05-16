@@ -1,10 +1,8 @@
 FROM n8nio/n8n:1.44.0
 
-# Use the default user provided by the image
-USER node
-
-# Expose the port n8n listens on
+# Expose the port that n8n listens on
 EXPOSE 5678
 
-# Start n8n
+# Default command to run n8n
+ENTRYPOINT ["tini", "--"]
 CMD ["n8n"]
